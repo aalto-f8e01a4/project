@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "shared";
+
+enum ActionType {
+  ACTION_TYPE_BUY = 0;
+  ACTION_TYPE_SELL = 1;
+}
+
+message Action {
+  string id = 1;
+  ActionType type = 2;
+  string tradingTime = 3;
+}

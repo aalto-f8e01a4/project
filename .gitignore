@@ -1,0 +1,5 @@
+clickhouse-data
+!clickhouse-data/.gitkeep
+
+data
+!data/.gitkeep

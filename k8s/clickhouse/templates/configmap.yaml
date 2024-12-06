@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: clickhouse-configmap
+  namespace: clickhouse
+data:
+  trade.proto: |-
+    {{ .Files.Get "trade.proto" | nindent 4 }}
+  action.proto: |-
+    {{ .Files.Get "action.proto" | nindent 4 }}
+  init.sql: |-
+    {{ .Files.Get "init.sql" | nindent 4 }}

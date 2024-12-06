@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package = "shared";
+
+message Trade {
+  string id = 1;
+  string secType = 2;
+  double last = 3;
+  string tradingTime = 4;
+}

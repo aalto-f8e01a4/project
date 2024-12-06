@@ -1,0 +1,77 @@
+replicaCount: 1
+shards: 1
+
+image:
+  tag: 24.8.8-debian-12-r0 # memory leak in later versions: https://github.com/ClickHouse/ClickHouse/issues/71106
+
+persistence:
+  enabled: true
+  size: 1Gi
+
+extraOverrides: |-
+  <clickhouse>
+    <format_schema_path>/bitnami/clickhouse/format_schemas</format_schema_path>
+  </clickhouse>
+
+zookeeper:
+  enabled: true
+  replicaCount: 1
+
+extraVolumes:
+  - name: trade-proto
+    configMap:
+      name: clickhouse-configmap
+      items:
+        - key: "trade.proto"
+          path: "trade.proto"
+  - name: action-proto
+    configMap:
+      name: clickhouse-configmap
+      items:
+        - key: "action.proto"
+          path: "action.proto"
+  - name: init-sql
+    configMap:
+      name: clickhouse-configmap
+      items:
+        - key: "init.sql"
+          path: "init.sql"
+
+extraVolumeMounts:
+  - name: trade-proto
+    mountPath: /bitnami/clickhouse/format_schemas/trade.proto
+    subPath: trade.proto
+    readOnly: false
+  - name: action-proto
+    mountPath: /bitnami/clickhouse/format_schemas/action.proto
+    subPath: action.proto
+    readOnly: false
+  - name: init-sql
+    mountPath: /tmp/sql/init.sql
+    subPath: init.sql
+    readOnly: false
+
+initdbScripts:
+  db-init.sh: |-
+    #!/bin/bash
+    set -e
+    script=$(cat /tmp/sql/init.sql)
+    echo "Starting database init: $script"
+    clickhouse-client --user $CLICKHOUSE_ADMIN_USER --password $CLICKHOUSE_ADMIN_PASSWORD -n "$script" 2>&1
+    echo "Finished database init"
+
+auth:
+  username: default
+  password: default
+
+metrics:
+  enabled: true
+  serviceMonitor:
+    enabled: true
+
+resources:
+  requests:
+    cpu: 300m
+    memory: 6000Mi
+  limits:
+    memory: 8192Mi

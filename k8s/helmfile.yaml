@@ -1,0 +1,55 @@
+repositories:
+  - name: bitnami
+    url: https://charts.bitnami.com/bitnami
+  - name: superset
+    url: https://apache.github.io/superset
+
+releases:
+  - name: kafka
+    namespace: kafka
+    chart: bitnami/kafka
+    version: 31.0.0
+    values:
+      - kafka/values.yaml
+
+  - name: clickhouse-configmap
+    namespace: clickhouse
+    createNamespace: true
+    chart: clickhouse/
+
+  - name: clickhouse
+    namespace: clickhouse
+    chart: bitnami/clickhouse
+    version: 7.0.2
+    needs:
+      - clickhouse-configmap
+    values:
+      - clickhouse/values.yaml
+
+  - name: superset
+    namespace: superset
+    chart: superset/superset
+    version: 0.13.2
+    values:
+      - superset/values.yaml
+    needs:
+      - clickhouse/clickhouse
+
+  - name: prometheus
+    namespace: monitoring
+    chart: bitnami/kube-prometheus
+    version: 10.1.0
+
+  - name: grafana
+    namespace: monitoring
+    chart: bitnami/grafana
+    version: 11.3.26
+    values:
+      - grafana/values.yaml
+
+  - name: trade-eventer
+    namespace: trader
+    createNamespace: true
+    chart: trade-eventer/
+    values:
+      - trade-eventer/values.yaml

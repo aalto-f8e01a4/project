@@ -1,0 +1,23 @@
+  C4Container
+    Person(trader, Trader, "A person subscribing to<br>the platform output's (e.g., EMA trends)")
+    System_Ext(tick_data, "Tick Data", "The tick data from an external system")
+
+    Container_Boundary(analysis, "Tick Data Analysis Platform") {
+        Container(dataviz, "Data Visualization App", "Superset", "Allows traders to look at the produced<br>query results with visualizations")
+        ContainerDb(database, "Database", "ClickHouse", "Large-scale database with optimized speeds<br>for storing all the tick data<br>and running data analysis queries")
+        Container(event_streaming, "Event Streaming", "Kafka", "High-speed distributed event streaming<br>between system parts")
+        Container(processor, "Tick Data Processor", "Go", "Parses raw data and checks its validity")
+        Container(eventer, "Trade Eventer", "Go", "Creates buy/sell events based on<br>the current EMA values every 5 minutes")
+
+        Rel(database, event_streaming, "Consume", "kafka")
+        UpdateRelStyle(database, event_streaming, $offsetX="-20", $offsetY="-35")
+        Rel(processor, event_streaming, "Produce", "kafka")
+        Rel(eventer, event_streaming, "Produce/Consume", "kafka")
+        Rel(dataviz, database, "Reads", "SQL")
+    }
+
+    Rel(trader, dataviz, "Uses", "HTTP")
+    UpdateRelStyle(trader, dataviz, $offsetX="10")
+    Rel(processor, tick_data, "Reads", "CSV")
+    UpdateRelStyle(processor, tick_data, $offsetX="-10", $offsetY="-150")
+

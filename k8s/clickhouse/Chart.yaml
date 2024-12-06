@@ -1,0 +1,7 @@
+apiVersion: v2
+
+name: clickhouse
+description: Clickhouse chart
+
+type: application
+version: 0.0.1

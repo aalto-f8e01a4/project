@@ -1,0 +1,85 @@
+{
+  "description_columns": {},
+  "id": 1,
+  "label_columns": {
+    "cache_timeout": "Cache Timeout",
+    "certification_details": "Certification Details",
+    "certified_by": "Certified By",
+    "changed_on_delta_humanized": "Changed On Delta Humanized",
+    "dashboards.dashboard_title": "Dashboards Dashboard Title",
+    "dashboards.id": "Dashboards Id",
+    "dashboards.json_metadata": "Dashboards Json Metadata",
+    "description": "Description",
+    "id": "Id",
+    "is_managed_externally": "Is Managed Externally",
+    "owners.first_name": "Owners First Name",
+    "owners.id": "Owners Id",
+    "owners.last_name": "Owners Last Name",
+    "params": "Params",
+    "query_context": "Query Context",
+    "slice_name": "Slice Name",
+    "tags.id": "Tags Id",
+    "tags.name": "Tags Name",
+    "tags.type": "Tags Type",
+    "thumbnail_url": "Thumbnail Url",
+    "url": "Url",
+    "viz_type": "Viz Type"
+  },
+  "result": {
+    "cache_timeout": null,
+    "certification_details": null,
+    "certified_by": null,
+    "changed_on_delta_humanized": "21 hours ago",
+    "dashboards": [
+      {
+        "dashboard_title": "Trader View",
+        "id": 1,
+        "json_metadata": "{\"chart_configuration\": {\"1\": {\"id\": 1, \"crossFilters\": {\"scope\": \"global\", \"chartsInScope\": [2, 3]}}, \"2\": {\"id\": 2, \"crossFilters\": {\"scope\": \"global\", \"chartsInScope\": [1, 3]}}, \"3\": {\"id\": 3, \"crossFilters\": {\"scope\": \"global\", \"chartsInScope\": [1, 2]}}}, \"global_chart_configuration\": {\"scope\": {\"rootPath\": [\"ROOT_ID\"], \"excluded\": []}, \"chartsInScope\": [1, 2, 3]}, \"color_scheme\": \"\", \"refresh_frequency\": 0, \"expanded_slices\": {}, \"label_colors\": {\"EMA_38\": \"#B02418\", \"EMA(38)\": \"#B02418\", \"EMA_100\": \"#306D8A\", \"EMA(100)\": \"#306D8A\"}, \"timed_refresh_immune_slices\": [], \"cross_filters_enabled\": true, \"default_filters\": \"{}\", \"shared_label_colors\": {\"2CRSI.FR\": \"#1FA8C9\", \"EMA_38, 2CRSI.FR\": \"#1FA8C9\", \"EMA_100, 2CRSI.FR\": \"#454E7C\", \"EMA(38), 2CRSI.FR\": \"#FF7F44\", \"EMA(100), 2CRSI.FR\": \"#A868B7\", \"Bullish, 2CRSI.FR\": \"#5AC189\", \"Bearish, 2CRSI.FR\": \"#FF7F44\"}, \"color_scheme_domain\": [], \"native_filter_configuration\": [{\"id\": \"NATIVE_FILTER-Hxv29O3zA\", \"controlValues\": {\"enableEmptyFilter\": true, \"defaultToFirstItem\": false, \"multiSelect\": true, \"searchAllOptions\": true, \"inverseSelection\": false}, \"name\": \"Bearish/bullish ID\", \"filterType\": \"filter_select\", \"targets\": [{\"datasetId\": 4, \"column\": {\"name\": \"id\"}}], \"defaultDataMask\": {\"extraFormData\": {\"filters\": [{\"col\": \"id\", \"op\": \"IN\", \"val\": [\"2CRSI.FR\"]}]}, \"filterState\": {\"validateMessage\": false, \"validateStatus\": false, \"label\": \"2CRSI.FR\", \"value\": [\"2CRSI.FR\"]}}, \"cascadeParentIds\": [], \"scope\": {\"rootPath\": [\"ROOT_ID\"], \"excluded\": [1]}, \"type\": \"NATIVE_FILTER\", \"description\": \"\", \"chartsInScope\": [2, 3], \"tabsInScope\": []}, {\"id\": \"NATIVE_FILTER--SMdomxeG\", \"controlValues\": {\"enableEmptyFilter\": true, \"defaultToFirstItem\": false, \"multiSelect\": true, \"searchAllOptions\": true, \"inverseSelection\": false}, \"name\": \"EMA ID\", \"filterType\": \"filter_select\", \"targets\": [{\"datasetId\": 3, \"column\": {\"name\": \"id\"}}], \"defaultDataMask\": {\"extraFormData\": {\"filters\": [{\"col\": \"id\", \"op\": \"IN\", \"val\": [\"2CRSI.FR\"]}]}, \"filterState\": {\"validateMessage\": false, \"validateStatus\": false, \"label\": \"2CRSI.FR\", \"value\": [\"2CRSI.FR\"]}}, \"cascadeParentIds\": [], \"scope\": {\"rootPath\": [\"ROOT_ID\"], \"excluded\": [2]}, \"type\": \"NATIVE_FILTER\", \"description\": \"\", \"chartsInScope\": [1, 3], \"tabsInScope\": []}]}"
+      }
+    ],
+    "description": null,
+    "id": 1,
+    "is_managed_externally": false,
+    "owners": [
+      {
+        "first_name": "Superset",
+        "id": 1,
+        "last_name": "Admin"
+      }
+    ],
+    "params": "{\"datasource\":\"3__table\",\"viz_type\":\"echarts_timeseries_line\",\"slice_id\":1,\"x_axis\":\"window_start\",\"time_grain_sqla\":\"PT5M\",\"x_axis_sort_asc\":true,\"x_axis_sort_series\":\"name\",\"x_axis_sort_series_ascending\":true,\"metrics\":[{\"aggregate\":\"MAX\",\"column\":{\"advanced_data_type\":null,\"certification_details\":null,\"certified_by\":null,\"column_name\":\"ema_38\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":7,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"Float64\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"datasourceWarning\":false,\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"label\":\"EMA_38\",\"optionName\":\"metric_r5a52dw1cf_m9lruqzpyu\",\"sqlExpression\":null},{\"aggregate\":\"MAX\",\"column\":{\"advanced_data_type\":null,\"certification_details\":null,\"certified_by\":null,\"column_name\":\"ema_100\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":8,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"Float64\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"datasourceWarning\":false,\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"label\":\"EMA_100\",\"optionName\":\"metric_j6kt7q6equr_mbkgftw60z\",\"sqlExpression\":null}],\"groupby\":[\"id\"],\"adhoc_filters\":[{\"clause\":\"WHERE\",\"comparator\":\"No filter\",\"expressionType\":\"SIMPLE\",\"operator\":\"TEMPORAL_RANGE\",\"subject\":\"window_start\"}],\"order_desc\":true,\"row_limit\":50000,\"truncate_metric\":true,\"show_empty_columns\":true,\"comparison_type\":\"values\",\"annotation_layers\":[],\"forecastPeriods\":10,\"forecastInterval\":0.8,\"x_axis_title_margin\":15,\"y_axis_title_margin\":15,\"y_axis_title_position\":\"Left\",\"sort_series_type\":\"sum\",\"color_scheme\":\"supersetColors\",\"seriesType\":\"line\",\"show_value\":false,\"only_total\":true,\"opacity\":0.2,\"markerSize\":6,\"show_legend\":true,\"legendType\":\"scroll\",\"legendOrientation\":\"top\",\"x_axis_time_format\":\"smart_date\",\"rich_tooltip\":true,\"tooltipTimeFormat\":\"smart_date\",\"y_axis_format\":\"SMART_NUMBER\",\"truncateXAxis\":true,\"y_axis_bounds\":[null,null],\"extra_form_data\":{},\"dashboards\":[1]}",
+    "query_context": "{\"datasource\":{\"id\":3,\"type\":\"table\"},\"force\":false,\"queries\":[{\"filters\":[{\"col\":\"window_start\",\"op\":\"TEMPORAL_RANGE\",\"val\":\"No filter\"}],\"extras\":{\"time_grain_sqla\":\"PT5M\",\"having\":\"\",\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[{\"timeGrain\":\"PT5M\",\"columnType\":\"BASE_AXIS\",\"sqlExpression\":\"window_start\",\"label\":\"window_start\",\"expressionType\":\"SQL\"},\"id\"],\"metrics\":[{\"aggregate\":\"MAX\",\"column\":{\"advanced_data_type\":null,\"certification_details\":null,\"certified_by\":null,\"column_name\":\"ema_38\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":7,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"Float64\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"datasourceWarning\":false,\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"label\":\"EMA_38\",\"optionName\":\"metric_r5a52dw1cf_m9lruqzpyu\",\"sqlExpression\":null},{\"aggregate\":\"MAX\",\"column\":{\"advanced_data_type\":null,\"certification_details\":null,\"certified_by\":null,\"column_name\":\"ema_100\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":8,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"Float64\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"datasourceWarning\":false,\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"label\":\"EMA_100\",\"optionName\":\"metric_j6kt7q6equr_mbkgftw60z\",\"sqlExpression\":null}],\"orderby\":[[{\"aggregate\":\"MAX\",\"column\":{\"advanced_data_type\":null,\"certification_details\":null,\"certified_by\":null,\"column_name\":\"ema_38\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":7,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"Float64\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"datasourceWarning\":false,\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"label\":\"EMA_38\",\"optionName\":\"metric_r5a52dw1cf_m9lruqzpyu\",\"sqlExpression\":null},false]],\"annotation_layers\":[],\"row_limit\":50000,\"series_columns\":[\"id\"],\"series_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{},\"time_offsets\":[],\"post_processing\":[{\"operation\":\"pivot\",\"options\":{\"index\":[\"window_start\"],\"columns\":[\"id\"],\"aggregates\":{\"EMA_38\":{\"operator\":\"mean\"},\"EMA_100\":{\"operator\":\"mean\"}},\"drop_missing_columns\":false}},{\"operation\":\"flatten\"}]}],\"form_data\":{\"datasource\":\"3__table\",\"viz_type\":\"echarts_timeseries_line\",\"slice_id\":1,\"x_axis\":\"window_start\",\"time_grain_sqla\":\"PT5M\",\"x_axis_sort_asc\":true,\"x_axis_sort_series\":\"name\",\"x_axis_sort_series_ascending\":true,\"metrics\":[{\"aggregate\":\"MAX\",\"column\":{\"advanced_data_type\":null,\"certification_details\":null,\"certified_by\":null,\"column_name\":\"ema_38\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":7,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"Float64\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"datasourceWarning\":false,\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"label\":\"EMA_38\",\"optionName\":\"metric_r5a52dw1cf_m9lruqzpyu\",\"sqlExpression\":null},{\"aggregate\":\"MAX\",\"column\":{\"advanced_data_type\":null,\"certification_details\":null,\"certified_by\":null,\"column_name\":\"ema_100\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":8,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"Float64\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"datasourceWarning\":false,\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"label\":\"EMA_100\",\"optionName\":\"metric_j6kt7q6equr_mbkgftw60z\",\"sqlExpression\":null}],\"groupby\":[\"id\"],\"adhoc_filters\":[{\"clause\":\"WHERE\",\"comparator\":\"No filter\",\"expressionType\":\"SIMPLE\",\"operator\":\"TEMPORAL_RANGE\",\"subject\":\"window_start\"}],\"order_desc\":true,\"row_limit\":50000,\"truncate_metric\":true,\"show_empty_columns\":true,\"comparison_type\":\"values\",\"annotation_layers\":[],\"forecastPeriods\":10,\"forecastInterval\":0.8,\"x_axis_title_margin\":15,\"y_axis_title_margin\":15,\"y_axis_title_position\":\"Left\",\"sort_series_type\":\"sum\",\"color_scheme\":\"supersetColors\",\"seriesType\":\"line\",\"show_value\":false,\"only_total\":true,\"opacity\":0.2,\"markerSize\":6,\"show_legend\":true,\"legendType\":\"scroll\",\"legendOrientation\":\"top\",\"x_axis_time_format\":\"smart_date\",\"rich_tooltip\":true,\"tooltipTimeFormat\":\"smart_date\",\"y_axis_format\":\"SMART_NUMBER\",\"truncateXAxis\":true,\"y_axis_bounds\":[null,null],\"extra_form_data\":{},\"dashboards\":[1],\"force\":false,\"result_format\":\"json\",\"result_type\":\"full\"},\"result_format\":\"json\",\"result_type\":\"full\"}",
+    "slice_name": "EMA values",
+    "tags": [],
+    "thumbnail_url": "/api/v1/chart/1/thumbnail/87ccd219242aead5479eede76964a4dc/",
+    "url": "/explore/?slice_id=1",
+    "viz_type": "echarts_timeseries_line"
+  },
+  "show_columns": [
+    "cache_timeout",
+    "certified_by",
+    "certification_details",
+    "changed_on_delta_humanized",
+    "dashboards.dashboard_title",
+    "dashboards.id",
+    "dashboards.json_metadata",
+    "description",
+    "id",
+    "owners.first_name",
+    "owners.id",
+    "owners.last_name",
+    "dashboards.id",
+    "dashboards.dashboard_title",
+    "params",
+    "slice_name",
+    "thumbnail_url",
+    "url",
+    "viz_type",
+    "query_context",
+    "is_managed_externally",
+    "tags.id",
+    "tags.name",
+    "tags.type"
+  ],
+  "show_title": "Show Slice"
+}
